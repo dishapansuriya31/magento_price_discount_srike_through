@@ -1,0 +1,12 @@
+<?xml version="1.0"?>  
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Block\Product\View\Price">
+    
+        <arguments>
+            <argument name="template" xsi:type="string">Kitchen_CustomDiscount::product/price/amount.phtml</argument>
+        </arguments>
+    </type>
+      <type name="Magento\Catalog\Pricing\Price\FinalPrice">
+        <plugin name="custom_discount_price_plugin" type="Kitchen\CustomDiscount\Plugin\PricePlugin" />
+    </type>
+</config>

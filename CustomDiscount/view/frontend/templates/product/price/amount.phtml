@@ -1,0 +1,17 @@
+<?php
+$originalPrice = $block->getProduct()->getData('original_price');
+$finalPrice = $block->getProduct()->getPrice();
+
+if ($originalPrice && $finalPrice) {
+?>
+    <p class="price-box">
+        <span class="old-price" style="text-decoration: line-through;">
+            <?php echo $block->escapeHtml($originalPrice); ?>
+        </span>
+        <span class="new-price">
+            <?php echo $block->escapeHtml($finalPrice); ?>
+        </span>
+    </p>
+<?php
+}
+?>
